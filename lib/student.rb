@@ -28,7 +28,6 @@ class Student
   end
   
   def save
-    sql = "UPDATE songs SET album = ? WHERE name = ?"
  
     DB[:conn].execute(sql, self.name, self.grade)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
