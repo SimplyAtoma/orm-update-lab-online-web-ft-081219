@@ -27,4 +27,12 @@ class Student
     
     DB[:conn].execute(sql)
   end
+  
+  def self.create
+    newstudent = Student.new
+  end 
+  
+  def self.new_from_db
+    
+  end
 end
