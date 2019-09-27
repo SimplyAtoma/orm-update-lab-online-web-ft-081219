@@ -29,7 +29,6 @@ class Student
   end
   
   def save
-    if DB[:conn].execute(self)
     sql = "UPDATE songs SET album = ? WHERE name = ?"
  
     DB[:conn].execute(sql, self.name, self.grade)
