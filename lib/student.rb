@@ -32,7 +32,7 @@ class Student
       self.update
     else
     sql = <<-SQL
-      INSERT INTO IF NOT EXISTS students (name, grade) 
+      INSERT INTO students (name, grade) 
       VALUES (?, ?)
     SQL
 
